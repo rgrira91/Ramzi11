@@ -1,0 +1,8 @@
+{
+  "name": "Remix NeonWave",
+  "description": "All-format Java MP3 \u0026 Hi-Fi audio player with real-time neon waveform visualizer, 10-band equalizer, presets, and background playback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

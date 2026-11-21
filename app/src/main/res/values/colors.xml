@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_cosmic_deep">#FF090416</color>
+    <color name="bg_cosmic_mid">#FF14092D</color>
+    <color name="bg_card_glass">#D6160B33</color>
+    <color name="bg_card_glass_light">#B81F1146</color>
+    <color name="bg_tile_normal">#9922144C</color>
+    <color name="bg_tile_selected">#CC2B1760</color>
+
+    <color name="neon_magenta">#FFF43F9E</color>
+    <color name="neon_pink">#FFEC4899</color>
+    <color name="neon_purple">#FFA855F7</color>
+    <color name="neon_violet">#FF7C3AED</color>
+    <color name="neon_cyan">#FF22D3EE</color>
+    <color name="neon_gold">#FFFACC15</color>
+
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFC4B5FD</color>
+    <color name="text_muted">#FF8B7EB8</color>
+
+    <color name="stroke_subtle">#4D9D4EDD</color>
+    <color name="divider_subtle">#26FFFFFF</color>
+</resources>

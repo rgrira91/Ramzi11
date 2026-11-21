@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer glowing neon border -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+            <gradient
+                android:angle="315"
+                android:centerColor="#CCB84DFF"
+                android:endColor="#CC22D3EE"
+                android:startColor="#CCF43F9E"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Inner dark glassmorphic fill -->
+    <item
+        android:bottom="1.5dp"
+        android:left="1.5dp"
+        android:right="1.5dp"
+        android:top="1.5dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="26.5dp" />
+            <gradient
+                android:angle="135"
+                android:centerColor="#EB170B38"
+                android:endColor="#EB0D0824"
+                android:startColor="#EB240F4A"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

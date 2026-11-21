@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF060410"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <!-- Top Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_drive_mode"
+                android:textColor="@color/neon_cyan"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drive_mode_subtitle"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/drive_btn_exit"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:text="@string/drive_mode_exit"
+            android:textColor="@color/neon_magenta"
+            android:textStyle="bold"
+            app:strokeColor="@color/neon_magenta" />
+    </LinearLayout>
+
+    <!-- Oversized Track Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_neon_hero_card"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/drive_album_art"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:contentDescription="@string/cd_album_art"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_default_album_art"
+            app:shapeAppearanceOverlay="@style/RoundedAlbumArt16"
+            app:strokeColor="@color/neon_cyan"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/drive_track_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/default_track_title"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/drive_track_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/default_track_artist"
+            android:textColor="@color/neon_cyan"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/drive_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:minHeight="36dp"
+            android:progressDrawable="@drawable/seekbar_neon_progress"
+            android:thumb="@drawable/seekbar_neon_thumb" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/drive_current_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/time_zero"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/drive_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_zero"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Oversized High-Contrast Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/drive_btn_prev"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:background="@drawable/bg_neon_sub_card"
+            android:contentDescription="@string/cd_previous"
+            android:padding="22dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_skip_previous"
+            app:tint="@color/text_primary" />
+
+        <ImageButton
+            android:id="@+id/drive_btn_play_pause"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginHorizontal="22dp"
+            android:background="@drawable/bg_play_button_ring"
+            android:contentDescription="@string/cd_play_pause"
+            android:padding="28dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_play" />
+
+        <ImageButton
+            android:id="@+id/drive_btn_next"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:background="@drawable/bg_neon_sub_card"
+            android:contentDescription="@string/cd_next"
+            android:padding="22dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_skip_next"
+            app:tint="@color/text_primary" />
+    </LinearLayout>
+
+    <!-- Quick Seek & Bass Boost Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/drive_btn_back10"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:text="@string/btn_jump_back_10"
+            android:textColor="@color/neon_cyan"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/neon_cyan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/drive_btn_bass_toggle"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1.4"
+            android:text="@string/drive_mode_bass_boost_btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/neon_magenta" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/drive_btn_fwd10"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:text="@string/btn_jump_fwd_10"
+            android:textColor="@color/neon_cyan"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/neon_cyan" />
+    </LinearLayout>
+</LinearLayout>

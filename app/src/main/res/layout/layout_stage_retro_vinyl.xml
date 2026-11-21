@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/retro_vinyl_stage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <!-- Wood-Framed Retro Vinyl Turntable Deck -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_retro_wood_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Turntable + Track Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.example.ui.views.RetroVinylView
+                android:id="@+id/retro_vinyl_view"
+                android:layout_width="154dp"
+                android:layout_height="154dp"
+                android:clickable="true"
+                android:contentDescription="@string/cd_play_pause"
+                android:focusable="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/retro_btn_favorite"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/cd_favorite"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_heart_outline"
+                        app:tint="#FF8B4E24" />
+
+                    <ImageButton
+                        android:id="@+id/retro_btn_more"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/cd_more_options"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_more_horiz"
+                        app:tint="#FF5A371E" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/retro_track_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/default_track_title"
+                    android:textColor="#FF2D1B10"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/retro_track_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/default_track_artist"
+                    android:textColor="#FF7A5638"
+                    android:textSize="13sp" />
+
+                <!-- Retro SeekBar & Time -->
+                <SeekBar
+                    android:id="@+id/retro_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="4dp"
+                    android:minHeight="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:progressDrawable="@drawable/seekbar_retro_progress"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/seekbar_retro_thumb" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="4dp">
+
+                    <TextView
+                        android:id="@+id/retro_current_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/time_zero"
+                        android:textColor="#FF6B492D"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/retro_total_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_zero"
+                        android:textColor="#FF6B492D"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tactile Analog Transport Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/retro_btn_shuffle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cd_shuffle"
+                android:padding="12dp"
+                android:src="@drawable/ic_shuffle"
+                app:tint="#FF6B492D" />
+
+            <ImageButton
+                android:id="@+id/retro_btn_prev"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_retro_btn_circle"
+                android:contentDescription="@string/cd_previous"
+                android:padding="12dp"
+                android:src="@drawable/ic_skip_previous"
+                app:tint="#FF3E2312" />
+
+            <ImageButton
+                android:id="@+id/retro_btn_play_pause"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/bg_retro_play_btn"
+                android:contentDescription="@string/cd_play_pause"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play"
+                app:tint="#FFFFF8EC" />
+
+            <ImageButton
+                android:id="@+id/retro_btn_next"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_retro_btn_circle"
+                android:contentDescription="@string/cd_next"
+                android:padding="12dp"
+                android:src="@drawable/ic_skip_next"
+                app:tint="#FF3E2312" />
+
+            <ImageButton
+                android:id="@+id/retro_btn_repeat"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cd_repeat"
+                android:padding="12dp"
+                android:src="@drawable/ic_repeat"
+                app:tint="#FF6B492D" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Analog VU Meter + Rotary Knobs Deck -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_retro_sub_card"
+            android:padding="8dp">
+
+            <com.example.ui.views.AnalogVuMeterView
+                android:id="@+id/retro_vu_meter"
+                android:layout_width="match_parent"
+                android:layout_height="104dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1.35"
+            android:background="@drawable/bg_retro_sub_card"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="8dp">
+
+            <com.example.ui.views.RotaryKnobView
+                android:id="@+id/retro_knob_volume"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_weight="1" />
+
+            <com.example.ui.views.RotaryKnobView
+                android:id="@+id/retro_knob_bass"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_weight="1" />
+
+            <com.example.ui.views.RotaryKnobView
+                android:id="@+id/retro_knob_treble"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
